@@ -53,7 +53,6 @@ On first run:
 - **Home**: http://localhost:5000
 - **Products**: http://localhost:5000/Products
 - **Cart**: http://localhost:5000/Cart
-- **Health Check**: http://localhost:5000/health
 
 ## Build Commands
 
@@ -171,12 +170,6 @@ curl -X POST http://localhost:5000/api/checkout \
 ```bash
 curl http://localhost:5000/api/orders/1
 ```
-
-### Test Health Check
-```bash
-curl http://localhost:5000/health
-```
-Should return `Healthy` status.
 
 ## Configuration
 
@@ -360,11 +353,11 @@ Then restart application (auto-seeding will run).
 **Workaround**: Manual testing
 **Future**: Add xUnit test project with service layer tests
 
-### 10. Health Check Not Comprehensive
-**Impact**: Health endpoint doesn't verify database connectivity
-**Location**: `Program.cs` health check registration
-**Workaround**: Basic health check sufficient for current needs
-**Future**: Add database health check, external dependency checks
+### 10. Health Check Registered But Not Mapped
+**Impact**: Health checks middleware registered but no endpoint exposed
+**Location**: `Program.cs` - `AddHealthChecks()` called but `MapHealthChecks()` not called
+**Workaround**: No health check endpoint available currently
+**Future**: Add `app.MapHealthChecks("/health")` and configure database health checks
 
 ## Performance Considerations
 

@@ -50,7 +50,6 @@ While implemented as a monolith, the application has four logical domain areas:
 - **Minimal APIs**: RESTful endpoints
   - `POST /api/checkout` - Process checkout with payment token
   - `GET /api/orders/{id}` - Retrieve order details
-  - `GET /health` - Health check endpoint
 
 ### Service Layer
 
@@ -166,7 +165,7 @@ Core business logic is organized into service interfaces and implementations:
 - Single instance deployment assumed
 - No distributed caching or session state
 - Database is single point of failure and bottleneck
-- Health check endpoint (`/health`) for monitoring readiness
+- Health checks registered but endpoint not mapped (no monitoring endpoint currently)
 
 ## Configuration
 

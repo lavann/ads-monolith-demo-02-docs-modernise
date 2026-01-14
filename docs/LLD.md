@@ -475,4 +475,4 @@ Return order JSON or 404
 7. **Configuration**: Hardcoded values in DesignTimeDbContextFactory
 8. **API Security**: No authentication/authorization on API endpoints
 9. **CORS**: No CORS configuration (may be needed for frontend)
-10. **Health Checks**: Registered but not customized (doesn't check DB health)
+10. **Health Checks**: Registered but endpoint not mapped (no `/health` endpoint available)

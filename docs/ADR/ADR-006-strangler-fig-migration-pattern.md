@@ -262,11 +262,13 @@ public class InventoryService
 #### Phase 1: First Service (Payment)
 **Goal**: Extract simplest service to validate pattern
 
-**Why Payment First**:
-- No database dependencies (stateless)
-- Well-defined interface (IPaymentGateway)
-- Low risk (not on critical read path)
-- Easy to validate (payment succeeds or fails)
+**Selection Criteria for First Service**:
+- Minimal dependencies (ideally stateless)
+- Well-defined interface (already abstracted)
+- Low risk (limited blast radius)
+- Easy to validate (clear success/failure criteria)
+
+**Note**: See ADR-007 for detailed justification of Payment Service selection.
 
 **Tasks**:
 1. Create Payment Service project

@@ -56,7 +56,7 @@ The Payment Service will:
 - Quick to develop and test
 
 **Small Codebase**
-- Current implementation ~30 lines of code
+- Minimal implementation (simple pass-through to gateway)
 - Easy to replicate in new service
 - Low risk of bugs during extraction
 - Fast to build and deploy

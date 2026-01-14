@@ -151,8 +151,8 @@ IPaymentGateway.ChargeAsync(PaymentRequest, CancellationToken)
           ▼          ▼          ▼          ▼          ▼
     ┌─────────────────────────────────────────────────────────┐
     │                    Data Stores                           │
-    │  (Payment: None)  (Products DB)  (Inventory DB)          │
-    │  (Cart DB)        (Orders DB)                            │
+    │  (Payment: Stateless)  (Products DB)  (Inventory DB)     │
+    │  (Cart DB)             (Orders DB)                       │
     └─────────────────────────────────────────────────────────┘
 ```
 

@@ -388,7 +388,7 @@ Return order JSON or 404
 - Code duplication and confusion
 - Maintenance burden
 
-**Location**: `Pages/Products/Index.cshtml.cs` lines 27-50
+**Location**: `Pages/Products/Index.cshtml.cs` lines 27-49
 
 ### 4. **Checkout Transaction Boundaries**
 

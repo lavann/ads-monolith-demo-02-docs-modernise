@@ -67,8 +67,10 @@ using (var scope = app.Services.CreateScope())
    
 3. **Concurrent Deployments**: Multiple instances migrating simultaneously
    - Race conditions possible
-   - EF Core has some protection, but not guaranteed
-   - Blue-green deployments could have schema incompatibility
+   - EF Core uses `__EFMigrationsHistory` table with database locks for coordination
+   - Protection mechanism: First instance acquires lock, others wait
+   - Limitations: Lock contention can cause timeouts; doesn't prevent schema incompatibility between running app versions
+   - Blue-green deployments could have schema incompatibility if old and new code run simultaneously
    
 4. **Breaking Migrations**: Destructive migrations (drop column) applied automatically
    - No review or approval gate

@@ -401,7 +401,7 @@ Not currently containerized, but would require:
 - Architecture Decision Records: `/docs/ADR/`
 
 ### Related Projects
-- Original repository: https://github.com/lavann/ads_monotlith_app
+- Original repository: https://github.com/lavann/ads_monolith_app
 
 ### EF Core Resources
 - [EF Core Documentation](https://docs.microsoft.com/en-us/ef/core/)
